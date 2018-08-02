@@ -1,5 +1,6 @@
 package me.b7w.cucumber;
 
+import me.b7w.cucumber.test.CucumberTest;
 import me.b7w.cucumber.test.SimpleTest;
 import me.b7w.cucumber.test.SpringTest;
 import org.junit.internal.TextListener;
@@ -12,7 +13,7 @@ public class EntryPoint {
     public static void main(String[] args) {
         JUnitCore junit = new JUnitCore();
         junit.addListener(new TextListener(System.out));
-        junit.run(SimpleTest.class, SpringTest.class);
+        junit.run(SimpleTest.class, SpringTest.class, CucumberTest.class);
     }
 
 }
