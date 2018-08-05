@@ -4,9 +4,7 @@ import io.qameta.allure.AllureLifecycle;
 import io.qameta.allure.FileSystemResultsWriter;
 import io.qameta.allure.junit4.AllureJunit4;
 import me.b7w.cucumber.test.CucumberTest;
-import me.b7w.cucumber.test.SimpleTest;
 import me.b7w.cucumber.test.SpringKotlinTest;
-import me.b7w.cucumber.test.SpringTest;
 import org.junit.internal.TextListener;
 import org.junit.runner.JUnitCore;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -22,7 +20,7 @@ public class Application {
         JUnitCore junit = new JUnitCore();
         junit.addListener(listener);
         junit.addListener(new TextListener(System.out));
-        junit.run(SimpleTest.class, SpringTest.class, CucumberTest.class, SpringKotlinTest.class);
+        junit.run(CucumberTest.class, SpringKotlinTest.class);
 
         AllureReportGenerator report = new AllureReportGenerator("target/allure-results");
         report.writeTo("target/allure-report");
