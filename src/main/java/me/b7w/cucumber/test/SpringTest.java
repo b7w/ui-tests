@@ -1,5 +1,6 @@
 package me.b7w.cucumber.test;
 
+import io.qameta.allure.junit4.Tag;
 import me.b7w.cucumber.Properties;
 import me.b7w.cucumber.page.MainPage;
 import org.fluentlenium.adapter.junit.FluentTest;
@@ -16,6 +17,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
+@Tag("java")
 public class SpringTest extends FluentTest {
 
     private static final String SEARCH_QUERY_NAME = "FluentLenium";

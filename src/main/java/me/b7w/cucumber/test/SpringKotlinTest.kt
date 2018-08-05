@@ -1,5 +1,6 @@
 package me.b7w.cucumber.test
 
+import io.qameta.allure.junit4.Tag
 import me.b7w.cucumber.Properties
 import me.b7w.cucumber.page.DuckDuckGoPage
 import me.b7w.cucumber.page.ISudoPage
@@ -16,6 +17,7 @@ import kotlin.test.assertTrue
 
 @RunWith(SpringRunner::class)
 @SpringBootTest
+@Tag("kotlin")
 open class SpringKotlinTest : FluentTest() {
 
     @Autowired

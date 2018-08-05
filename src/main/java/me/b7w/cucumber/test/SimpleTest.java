@@ -1,5 +1,6 @@
 package me.b7w.cucumber.test;
 
+import io.qameta.allure.junit4.Tag;
 import me.b7w.cucumber.page.MainPage;
 import org.fluentlenium.adapter.junit.FluentTest;
 import org.fluentlenium.core.annotation.Page;
@@ -9,6 +10,7 @@ import java.util.concurrent.TimeUnit;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
+@Tag("java")
 public class SimpleTest extends FluentTest {
 
     private static final String SEARCH_QUERY_NAME = "FluentLenium";
